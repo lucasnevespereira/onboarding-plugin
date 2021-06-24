@@ -19,11 +19,11 @@ Ajouter sur le git le GIF et mettre le lien ici
 ## Usage
 
 ```
-git clone https://github.com/lucasnevespereira/catherine-bot-plugin.git
+git clone https://github.com/lucasnevespereira/onboarding-plugin
 ```
 
 ```
-cd catherine-bot-plugin
+cd onboarding-plugin
 make dist
 ```
 
