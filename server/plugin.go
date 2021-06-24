@@ -47,9 +47,7 @@ func (p *Plugin) OnActivate() error {
 
 	p.botId = id
 
-	//p.API.GetDirectChannel(p.userId, p.botId)
-
-	LaunchBot()
+	p.LaunchBot()
 
 	return nil
 }
