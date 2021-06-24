@@ -19,6 +19,8 @@ type Plugin struct {
 	// configuration is the active plugin configuration. Consult getConfiguration and
 	// setConfiguration for usage.
 	configuration *configuration
+
+	bot model.Bot
 }
 
 // ServeHTTP demonstrates a plugin that handles HTTP requests by greeting the world.
@@ -34,10 +36,14 @@ func (p *Plugin) OnActivate() error {
 		Description: "Catherine increases your daily workflow",
 	}
 
-	_, err := p.API.CreateBot(b)
+	pluginBot, err := p.API.CreateBot(b)
 	if err != nil {
 		return err
 	}
+
+	p.bot = *pluginBot
+
+	p.LaunchBot()
 
 	return nil
 }
