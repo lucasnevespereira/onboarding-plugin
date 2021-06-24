@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/mattermost/mattermost-server/v5/model"
@@ -16,11 +15,11 @@ var (
 const (
 	mmSiteUrl      = "http://localhost:8065"
 	mmTeamName     = "groupe6"
-	botChannelName = "Catherine"
+	botChannelName = "channel-for-catherine"
 )
 
-func (p *Plugin) LaunchBot() {
-	fmt.Println(p.bot.Username)
+func LaunchBot() {
+	// fmt.Println(p.bot.Username)
 
 	client = model.NewAPIv4Client(mmSiteUrl)
 	team, resp := client.GetTeamByName(mmTeamName, "")
@@ -31,6 +30,20 @@ func (p *Plugin) LaunchBot() {
 	createBotChannel(team)
 
 	sendBotMsg("this is a test")
+
+	// start websocket
+	// webSocketClient, _ := model.NewWebSocketClient4("ws://localhost:8065", client.AuthToken)
+
+	// webSocketClient.Listen()
+
+	// go func() {
+	// 	for resp := range webSocketClient.EventChannel {
+	// 		HandleWebSocketResponse(resp)
+	// 	}
+	// }()
+
+	// // You can block forever with
+	// select {}
 
 }
 
@@ -67,3 +80,14 @@ func sendBotMsg(msg string) {
 		log.Println(resp.Error)
 	}
 }
+
+// func HandleWebSocketResponse(event *model.WebSocketEvent) {
+// 	HandleMsgFromDebuggingChannel(event)
+// 	c := cron.New()
+// 	c.AddFunc("@every 1s", func() {
+// 		fmt.Println("Every 1 min")
+// 		SendBotMsg("1 seconde wsh")
+// 	})
+// 	c.Start()
+// 	fmt.Println("Done")
+// }

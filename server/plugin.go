@@ -20,12 +20,16 @@ type Plugin struct {
 	// setConfiguration for usage.
 	configuration *configuration
 
-	bot model.Bot
+	botId string
+
+	userId string
 }
 
 // ServeHTTP demonstrates a plugin that handles HTTP requests by greeting the world.
 func (p *Plugin) ServeHTTP(c *plugin.Context, w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Hello, world!")
+	mmUserID := r.Header.Get("Mattermost-User-Id")
+	p.userId = mmUserID
 }
 
 // OnActivate creates bot
@@ -36,14 +40,16 @@ func (p *Plugin) OnActivate() error {
 		Description: "Catherine increases your daily workflow",
 	}
 
-	pluginBot, err := p.API.CreateBot(b)
+	id, err := p.Helpers.EnsureBot(b)
 	if err != nil {
 		return err
 	}
 
-	p.bot = *pluginBot
+	p.botId = id
 
-	p.LaunchBot()
+	//p.API.GetDirectChannel(p.userId, p.botId)
+
+	LaunchBot()
 
 	return nil
 }
