@@ -1,6 +1,6 @@
 # Onboarding Mattermost Plugin
 
-Onboarding Plugin - Catherine Bot
+![Logo](assets/logo.png)
 
 # Description du projet
 
@@ -31,14 +31,9 @@ Mots clés :
 
 Find a <b>tar.gz</b> file in the `/dist` folder
 
-# Installation
+## Installation
 
-Rajouter un guide pour installer le projet :)
-
-# Support
-
-Lien du userguide Mattermost : https://docs.mattermost.com/guides/user.html
-Contacter : lucas.nevespereira@eemi.com
+Rajouter un guide pour installer le projet 🙂
 
 #### Upload plugin to Mattermost
 
@@ -47,3 +42,8 @@ Log into your mattermost account as sysadmin
 -   Go to system console
 -   Under Plugin management upload the <b>tar.gz</b> file
 -   Enable plugin
+
+# Support
+
+-   Lien du userguide Mattermost : https://docs.mattermost.com/guides/user.html
+-   Contacter : lucas.nevespereira@eemi.com
