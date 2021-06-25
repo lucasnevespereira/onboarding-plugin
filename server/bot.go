@@ -17,12 +17,14 @@ func (p *Plugin) LaunchBot() {
 	post := &model.Post{
 		UserId:    p.botId,
 		ChannelId: c.Id,
-		Message:   "this is working",
+		Message:   "Welcome!",
 	}
 
 	_ = p.API.SendEphemeralPost(p.userId, post)
 
-	// websocket to trigger cronjob
+	// TODO: Create a Scheduler
+
+	// websocket?
 	//client = model.NewAPIv4Client("http://localhost:8065")
 
 	// webSocketClient, _ := model.NewWebSocketClient4("ws://localhost:8065", client.AuthToken)
