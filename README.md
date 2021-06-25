@@ -47,6 +47,8 @@ Log into your mattermost account as sysadmin
 
 ## Example Webhook Request
 
+To send a bot message (webhook) every 5 seconds
+
 ```
 cd demo
 watch -n 5 ./webhook-request.sh
