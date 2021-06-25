@@ -45,6 +45,13 @@ Log into your mattermost account as sysadmin
 
 -   <b>Integrate Webhook call from plugin internal code </b>
 
+-   <b>Use custom question and answers from `settings` in `plugin.json`</b>
+
+-   <b>Integrate internal scheduler or cronjob to the plugin</b>
+
+-   <b>Add test coverage for the plugin.</b> <br>
+    <small>You can start [here](server/plugin_test.go)</small>
+
 ## Example Webhook Request
 
 To send a bot message (webhook) every 5 seconds
@@ -59,13 +66,6 @@ watch -n 5 ./webhook-request.sh
 ```
 brew install watch
 ```
-
--   <b>Use custom question and answers from `settings` in `plugin.json`</b>
-
--   <b>Integrate internal scheduler or cronjob to the plugin</b>
-
--   <b>Add test coverage for the plugin.</b> <br>
-    <small>You can start [here](server/plugin_test.go)</small>
 
 # Support
 
