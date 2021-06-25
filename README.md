@@ -43,11 +43,9 @@ Log into your mattermost account as sysadmin
 
 # Todo
 
--   <b>Integrate Webhook call from plugin internal code </b>
+-   <b>Fetch `settings` data from `plugin.json`</b>
 
--   <b>Use custom question and answers from `settings` in `plugin.json`</b>
-
--   <b>Integrate internal scheduler or cronjob to the plugin</b>
+-   <b>Configure internal cronjob to be customisable</b>
 
 -   <b>Add test coverage for the plugin.</b> <br>
     <small>You can start [here](server/plugin_test.go)</small>
