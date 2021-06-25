@@ -25,6 +25,7 @@ func (p *Plugin) LaunchBot() {
 	// TODO: Create a Scheduler
 
 	// websocket?
+
 	//client = model.NewAPIv4Client("http://localhost:8065")
 
 	// webSocketClient, _ := model.NewWebSocketClient4("ws://localhost:8065", client.AuthToken)
@@ -33,6 +34,7 @@ func (p *Plugin) LaunchBot() {
 
 	// go func() {
 	// 	for resp := range webSocketClient.EventChannel {
+	//		p.API.PublishWebSocketEvent(resp)
 	// 		fmt.Println(resp)
 	// 		c := cron.New()
 	// 		c.AddFunc("@every 1s", func() {
