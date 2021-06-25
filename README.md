@@ -43,14 +43,16 @@ Log into your mattermost account as sysadmin
 
 # Todo
 
--   <b>Fetch `settings` data from `plugin.json`</b>
+-   <b>Fetch `settings data` from `plugin.json`.</b>
 
--   <b>Configure internal cronjob to be customisable</b>
+-   <b>Configure internal cronjob to be customisable.</b>
 
 -   <b>Add test coverage for the plugin.</b> <br>
     <small>You can start [here](server/plugin_test.go)</small>
 
 ## Webhook Request
+
+Our plugin has an internal cronjob or scheduler that can send messages to a channel, but it is still under development/improvement. So you can try out incoming webhook to reproduce the expected behaviour.
 
 ### Prerequesites
 
