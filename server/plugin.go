@@ -23,6 +23,8 @@ type Plugin struct {
 	botId string
 
 	userId string
+
+	botChannel *model.Channel
 }
 
 // ServeHTTP demonstrates a plugin that handles HTTP requests by greeting the world.

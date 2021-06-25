@@ -14,24 +14,17 @@ func (p *Plugin) LaunchBot() {
 
 	c, _ := p.API.GetChannelByName(team.Id, "Catherine", true)
 
-	post := &model.Post{
-		UserId:    p.botId,
-		ChannelId: c.Id,
-		Message:   "Welcome!",
-	}
+	p.botChannel = c
 
-	_ = p.API.SendEphemeralPost(p.userId, post)
+	p.SendBotMsg()
+
+	go p.RunCronJob()
 
 	// TODO: Create a Scheduler
-
 	// websocket?
-
-	//client = model.NewAPIv4Client("http://localhost:8065")
-
+	// client = model.NewAPIv4Client("http://localhost:8065")
 	// webSocketClient, _ := model.NewWebSocketClient4("ws://localhost:8065", client.AuthToken)
-
 	// webSocketClient.Listen()
-
 	// go func() {
 	// 	for resp := range webSocketClient.EventChannel {
 	//		p.API.PublishWebSocketEvent(resp)
@@ -43,8 +36,17 @@ func (p *Plugin) LaunchBot() {
 	// 		c.Start()
 	// 	}
 	// }()
-
 	// To loop
 	//select {}
 
+}
+
+func (p *Plugin) SendBotMsg() {
+	post := &model.Post{
+		UserId:    p.botId,
+		ChannelId: p.botChannel.Id,
+		Message:   "Welcome!",
+	}
+
+	p.API.SendEphemeralPost(p.userId, post)
 }
