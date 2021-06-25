@@ -67,6 +67,12 @@ watch -n 5 ./webhook-request.sh
 brew install watch
 ```
 
+# How to Contribute
+
+If you want to contribute to this project please read the [Contribution Guide](CONTRIBUTING.md).
+
+<hr>
+
 # Support
 
 -   [Mattermost Userguide](https://docs.mattermost.com/guides/user.html)
