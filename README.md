@@ -43,6 +43,27 @@ Log into your mattermost account as sysadmin
 -   Under Plugin management upload the <b>tar.gz</b> file
 -   Enable plugin
 
+# Todo
+
+-   <b>Integrate Webhook call from plugin internal code </b>
+
+## Example Webhook Request
+
+```
+cd demo
+watch -n 5 ./webhook-request.sh
+```
+
+### Prerequesites
+
+```
+brew install watch
+```
+
+-   <b>Use custom question and answers from `settings` in `plugin.json`</b>
+
+-   <b>Integrate internal scheduler or cronjob to the plugin</b>
+
 # Support
 
 -   [Mattermost Userguide](https://docs.mattermost.com/guides/user.html)
