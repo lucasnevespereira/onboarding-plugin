@@ -64,6 +64,9 @@ brew install watch
 
 -   <b>Integrate internal scheduler or cronjob to the plugin</b>
 
+-   <b>Add test coverage for the plugin.</b> <br>
+    <small>You can start [here](server/plugin_test.go)</small>
+
 # Support
 
 -   [Mattermost Userguide](https://docs.mattermost.com/guides/user.html)
