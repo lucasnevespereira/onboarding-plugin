@@ -20,8 +20,17 @@
         "bundle_path": "webapp/dist/main.js"
     },
     "settings_schema": {
-        "header": "",
+        "header": "Configure Onboarding Plugin here",
         "footer": "",
-        "settings": []
+        "settings": [
+            {
+                "key": "9amInteraction",
+                "display_name": "9am Interaction:",
+                "type": "text",
+                "help_text": "Handle the 9am interaction here",
+                "placeholder": "Write your 9am interaction here",
+                "default": "Bonjour, prêt à travailler"
+            }
+        ]
     }
 }
