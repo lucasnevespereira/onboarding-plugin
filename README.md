@@ -66,3 +66,7 @@ brew install watch
 
 -   [Mattermost Userguide](https://docs.mattermost.com/guides/user.html)
 -   [Developer Contact](mailto:lucas.nevespereira@eemi.com)
+
+# License
+
+This project is under [BSD-3 License](LICENSE)
