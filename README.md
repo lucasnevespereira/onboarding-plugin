@@ -16,9 +16,7 @@ Workshop project done by 5 students at [EEMI](https://eemi.com). We've created a
 
 Our project has the particularity of being quite flexible and adaptable to all situations. It can also be used in a fun or educational way.
 
-# GIF
-
-Ajouter sur le git le GIF et mettre le lien ici
+![Onboarding GIF](assets/demo.gif)
 
 ## Usage
 
