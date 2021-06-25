@@ -16,7 +16,7 @@ Workshop project done by 5 students at [EEMI](https://eemi.com). We've created a
 
 Our project has the particularity of being quite flexible and adaptable to all situations. It can also be used in a fun or educational way.
 
-![Onboarding GIF](assets/demo.gif)
+![Onboarding GIF](demo/demo.gif)
 
 ## Usage
 
@@ -52,19 +52,25 @@ Log into your mattermost account as sysadmin
 -   <b>Add test coverage for the plugin.</b> <br>
     <small>You can start [here](server/plugin_test.go)</small>
 
-## Example Webhook Request
+## Webhook Request
+
+### Prerequesites
+
+-   Create a incoming webhook in `Integrations`
+-   Get the Webhook endpoint and add it to `demo/webhook-request.sh`
+-   Install watch cmd
+
+```
+brew install watch
+```
+
+### Example request
 
 To send a bot message (webhook) every 5 seconds
 
 ```
 cd demo
 watch -n 5 ./webhook-request.sh
-```
-
-### Prerequesites
-
-```
-brew install watch
 ```
 
 # How to Contribute
