@@ -49,7 +49,9 @@ func (p *Plugin) OnActivate() error {
 
 	p.botId = id
 
-	p.LaunchBot()
+	p.ConfigBot()
+
+	go p.RunCronJob()
 
 	return nil
 }
